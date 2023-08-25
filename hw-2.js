@@ -7,6 +7,14 @@
 // let yearFirstIphone = 2007;
 // alert(`Год выпуска первого iPhone ${yearFirstIphone}`);
 
-// Задание 3
-let name = 'Brendan Eich'
-alert(name);
+// // Задание 3
+// let name = 'Brendan Eich'
+// alert(name);
+
+// Задание 4
+let a = 10;
+let b = 2;
+alert(`a + b = ${a + b};
+a - b = ${a - b};
+a * b = ${a * b};
+a / b = ${a / b}.`);
