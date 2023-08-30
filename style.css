@@ -73,4 +73,15 @@ body {
   line-height: 32px; /* 133.333% */
   bottom: 32px;
   left: 32px;
+}
+
+@media (max-width: 426px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .top__heading {
+    text-align: center;
+    font-size: 32px;
+  }
 }/*# sourceMappingURL=style.css.map */

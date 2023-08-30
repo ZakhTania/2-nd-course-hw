@@ -16,7 +16,7 @@ body {
 }
 
 .top {
-    background-image: url(img/top__back.png);
+    background-image: url(img/top__back.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -79,3 +79,5 @@ bottom: 32px;
 left: 32px;
     }
 }
+
+@import 'mobile';

@@ -1,0 +1,13 @@
+@media (max-width: 426px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .top {
+        &__heading {
+            text-align: center;
+            font-size: 32px;
+        }
+    }
+}
