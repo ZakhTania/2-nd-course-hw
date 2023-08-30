@@ -48,13 +48,17 @@ body {
         width: 234px;
         height: 48px;
         border-radius: 30px;
-background: #9C0332;
-color: $colorText;
-font-family: Montserrat;
-font-size: 18px;
-font-weight: 400;
-margin-bottom: 494px;
-border: none;
+        background: #9C0332;
+        color: $colorText;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 494px;
+        border: none;
+
+        &:hover {
+            cursor: url(img/cursor-hand-lines.svg), pointer;
+        }
     }
 }
 
@@ -63,21 +67,33 @@ border: none;
     display: flex;
     gap: 32px;
 }
+
 .game-card {
     max-width: calc((100vw - (padding-left + padding-right) - 64px) /2);
     position: relative;
+
     &__img {
         max-width: 100%;
+        border-radius: 16px;
     }
+
     &__name {
         position: absolute;
         color: $colorText;
-font-size: 24px;
-font-weight: 600;
-line-height: 32px; /* 133.333% */
-bottom: 32px;
-left: 32px;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        /* 133.333% */
+        bottom: 32px;
+        left: 32px;
+    }
+
+    &:hover {
+        cursor: url(img/cursor-hand-lines.svg), pointer;
+        border-radius: 16px;
+        border: 3px solid #44D2FF;
     }
 }
+
 
 @import 'mobile';

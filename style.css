@@ -51,6 +51,9 @@ body {
   margin-bottom: 494px;
   border: none;
 }
+.top__btn:hover {
+  cursor: url(img/cursor-hand-lines.svg), pointer;
+}
 
 .games-box {
   margin-bottom: 128px;
@@ -64,15 +67,22 @@ body {
 }
 .game-card__img {
   max-width: 100%;
+  border-radius: 16px;
 }
 .game-card__name {
   position: absolute;
   color: #fff;
   font-size: 24px;
   font-weight: 600;
-  line-height: 32px; /* 133.333% */
+  line-height: 32px;
+  /* 133.333% */
   bottom: 32px;
   left: 32px;
+}
+.game-card:hover {
+  cursor: url(img/cursor-hand-lines.svg), pointer;
+  border-radius: 16px;
+  border: 3px solid #44D2FF;
 }
 
 @media (max-width: 426px) {
@@ -101,5 +111,8 @@ body {
   .top__btn {
     align-self: center;
     margin-bottom: 238px;
+  }
+  .games-box {
+    flex-wrap: wrap;
   }
 }/*# sourceMappingURL=style.css.map */
