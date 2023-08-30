@@ -78,3 +78,19 @@ if (clientOS === 1) {
 } else if (clientOS === 0) {
     alert(`Установите версию приложения для iOS по ссылке`);
 };
+ 
+// Задание 9 
+let clientDeviceYear = Number(prompt(`Ведите год производства телефона`));
+if (/iPad|iPhone|iPod/i.test(navigator.userAgent)) {
+    if (clientDeviceYear >= 2015) {
+        alert(`Установите версию приложения для iOS по ссылке`);
+    } else {
+       alert(`Установите облегченную версию приложения для iOS по ссылке`); 
+    }
+} else if (/Android/i.test(navigator.userAgent)) {
+    if (clientDeviceYear >= 2015) {
+        alert(`Установите версию приложения для Android по ссылке`);
+    } else {
+       alert(`Установите облегченную версию приложения для Android по ссылке`); 
+    }
+}
