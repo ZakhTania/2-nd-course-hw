@@ -21,12 +21,12 @@ body {
     background-size: cover;
     background-position: center;
     margin-bottom: 128px;
+    padding-top: 216px;
 
     &__heading {
         color: $colorText;
         font-size: 64px;
         font-weight: 700;
-        margin-top: 216px;
         margin-bottom: 32px;
     }
 
@@ -91,7 +91,7 @@ body {
     &:hover {
         cursor: url(img/cursor-hand-lines.svg), pointer;
         border-radius: 16px;
-        border: 3px solid #44D2FF;
+        outline: 3px solid #44D2FF;
     }
 }
 

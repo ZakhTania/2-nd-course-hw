@@ -19,12 +19,12 @@ body {
   background-size: cover;
   background-position: center;
   margin-bottom: 128px;
+  padding-top: 216px;
 }
 .top__heading {
   color: #fff;
   font-size: 64px;
   font-weight: 700;
-  margin-top: 216px;
   margin-bottom: 32px;
 }
 .top__disc {
@@ -82,7 +82,7 @@ body {
 .game-card:hover {
   cursor: url(img/cursor-hand-lines.svg), pointer;
   border-radius: 16px;
-  border: 3px solid #44D2FF;
+  outline: 3px solid #44D2FF;
 }
 
 @media (max-width: 426px) {
@@ -96,11 +96,11 @@ body {
     flex-direction: column;
     gap: 32px;
     text-align: center;
+    padding-top: 238px;
   }
   .top__heading {
     text-align: center;
     font-size: 32px;
-    margin-top: 238px;
     margin-bottom: 0;
   }
   .top__disc {

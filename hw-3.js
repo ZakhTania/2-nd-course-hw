@@ -59,3 +59,8 @@
 // };
 
 // Задание 7
+let anyNumber = Number(prompt(`Пожалуйста, введите любое число`));
+if (isNaN(anyNumber) === false) {
+    let result = anyNumber % 2 === 0 ? `Число четное` : `Число нечетное`;
+    alert(result);
+};
