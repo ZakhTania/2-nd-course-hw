@@ -28,7 +28,7 @@ body {
   margin-bottom: 32px;
 }
 .top__disc {
-  width: 481px;
+  max-width: 481px;
   color: #fff;
   font-size: 18px;
   font-weight: 300;
@@ -80,8 +80,26 @@ body {
     padding-left: 16px;
     padding-right: 16px;
   }
+  .top {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+  }
   .top__heading {
     text-align: center;
     font-size: 32px;
+    margin-top: 238px;
+    margin-bottom: 0;
+  }
+  .top__disc {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 0;
+  }
+  .top__btn {
+    align-self: center;
+    margin-bottom: 238px;
   }
 }/*# sourceMappingURL=style.css.map */
