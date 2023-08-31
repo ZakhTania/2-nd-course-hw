@@ -56,41 +56,41 @@ if (monthNumber > 0 && monthNumber < 13) {
         default:
             break;
     }
+} else {
+    console.log(`Некорректное число`);
 };
 
 // Задание 7
-let anyNumber = Number(prompt(`Пожалуйста, введите любое число`));
-if (isNaN(anyNumber) === false) {
+let anyNumber = prompt(`Пожалуйста, введите любое число`);
+if (!isNaN(anyNumber) && anyNumber != '' && anyNumber != null) {
     let result = anyNumber % 2 === 0 ? `Число четное` : `Число нечетное`;
     alert(result);
+} else {
+    alert(`Некорректное число`)
 };
 
 // Задание 8
-let clientOS = NaN;
-if (/iPad|iPhone|iPod/i.test(navigator.userAgent)) {
-    clientOS = 0;
-} else if (/Android/i.test(navigator.userAgent)) {
-    clientOS = 1;
-};
-
-if (clientOS === 1) {
+let clientOS = confirm(`Используете Android?`)
+if (clientOS == 1) {
     alert(`Установите версию приложения для Android по ссылке`);
-} else if (clientOS === 0) {
+} else {
     alert(`Установите версию приложения для iOS по ссылке`);
 };
- 
-// Задание 9 
-let clientDeviceYear = Number(prompt(`Ведите год производства телефона`));
-if (/iPad|iPhone|iPod/i.test(navigator.userAgent)) {
-    if (clientDeviceYear >= 2015) {
-        alert(`Установите версию приложения для iOS по ссылке`);
-    } else {
-       alert(`Установите облегченную версию приложения для iOS по ссылке`); 
-    }
-} else if (/Android/i.test(navigator.userAgent)) {
-    if (clientDeviceYear >= 2015) {
+
+// Задание 9
+let clientDeviceOS = confirm(`Используете Android?`)
+let clientDeviceYear = confirm(`Ваш телефон произведен после 2014 года?`)
+if (clientDeviceOS == 1) {
+    if (clientDeviceYear == 1) {
         alert(`Установите версию приложения для Android по ссылке`);
     } else {
-       alert(`Установите облегченную версию приложения для Android по ссылке`); 
+        alert(`Установите облегченную версию приложения для Android по ссылке`);
+    }
+} else {
+    if (clientDeviceYear == 1) {
+        alert(`Установите версию приложения для iOS по ссылке`);
+    } else {
+        alert(`Установите облегченную версию приложения для iOS по ссылке`);
     }
 }
+
