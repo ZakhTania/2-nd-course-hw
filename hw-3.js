@@ -71,7 +71,7 @@ if (!isNaN(anyNumber) && anyNumber != '' && anyNumber != null) {
 
 // Задание 8
 let clientOS = confirm(`Используете Android?`)
-if (clientOS == 1) {
+if (clientOS) {
     alert(`Установите версию приложения для Android по ссылке`);
 } else {
     alert(`Установите версию приложения для iOS по ссылке`);
@@ -80,17 +80,16 @@ if (clientOS == 1) {
 // Задание 9
 let clientDeviceOS = confirm(`Используете Android?`)
 let clientDeviceYear = confirm(`Ваш телефон произведен после 2014 года?`)
-if (clientDeviceOS == 1) {
-    if (clientDeviceYear == 1) {
+if (clientDeviceOS) {
+    if (clientDeviceYear) {
         alert(`Установите версию приложения для Android по ссылке`);
     } else {
         alert(`Установите облегченную версию приложения для Android по ссылке`);
     }
 } else {
-    if (clientDeviceYear == 1) {
+    if (clientDeviceYear) {
         alert(`Установите версию приложения для iOS по ссылке`);
     } else {
         alert(`Установите облегченную версию приложения для iOS по ссылке`);
     }
 }
-
