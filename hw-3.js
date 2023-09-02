@@ -62,7 +62,7 @@ if (monthNumber > 0 && monthNumber < 13) {
 
 // Задание 7
 let anyNumber = prompt(`Пожалуйста, введите любое число`);
-if (!isNaN(anyNumber) && anyNumber != '' && anyNumber != null) {
+if (!isNaN(anyNumber) && anyNumber.trim() != '' && anyNumber !== null) {
     let result = anyNumber % 2 === 0 ? `Число четное` : `Число нечетное`;
     alert(result);
 } else {
@@ -76,6 +76,9 @@ if (clientOS) {
 } else {
     alert(`Установите версию приложения для iOS по ссылке`);
 };
+
+// // Альтернативный способ
+// alert(`Установите версию приложения для ${ clientOS ? `Android` : `iOS`}  по ссылке`);
 
 // Задание 9
 let clientDeviceOS = confirm(`Используете Android?`)
@@ -93,3 +96,6 @@ if (clientDeviceOS) {
         alert(`Установите облегченную версию приложения для iOS по ссылке`);
     }
 }
+
+// // Альтернативный способ
+// alert(`Установите ${ clientDeviceYear ? `` : `облегченную`} версию приложения для ${ clientDeviceOS ? `Android` : `iOS`} по ссылке`);
