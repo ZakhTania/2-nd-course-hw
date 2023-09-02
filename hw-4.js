@@ -3,8 +3,13 @@
 //     console.log(`Привет`);
 // }
 
-// Задание 2
-for (let number = 1; number < 6; number++) {
-   console.log(number);
-1   
+// // Задание 2
+// for (let number = 1; number < 6; number++) {
+//    console.log(number);
+// 1   
+// }
+
+// Задание 3
+for (let num = 7; num < 23; num++){
+console.log(num);
 }
