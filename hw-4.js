@@ -9,7 +9,17 @@
 // 1   
 // }
 
-// Задание 3
-for (let num = 7; num < 23; num++){
-console.log(num);
+// // Задание 3
+// for (let num = 7; num < 23; num++){
+// console.log(num);
+// }
+
+// Задание 4
+const obj = {
+    Коля: `200`,
+    Вася: `300`,
+    Петя: `400`
+}
+for (let name in obj) {
+    console.log(`${name} -  зарплата ${obj[name]} долларов`);
 }
