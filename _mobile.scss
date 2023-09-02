@@ -1,0 +1,35 @@
+@media (max-width: 426px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .top {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+        padding-top: 238px;
+
+        &__heading {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 0;
+        }
+
+        &__disc {
+            font-size: 14px;
+            line-height: 22px;
+            margin-bottom: 0;
+        }
+
+        &__btn {
+            align-self: center;
+            margin-bottom: 238px;
+        }
+    }
+    .games-box {
+        flex-wrap: wrap;
+    }
+}

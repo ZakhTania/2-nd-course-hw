@@ -16,22 +16,22 @@ body {
 }
 
 .top {
-    background-image: url(img/top__back.png);
+    background-image: url(img/top__back.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     margin-bottom: 128px;
+    padding-top: 216px;
 
     &__heading {
         color: $colorText;
         font-size: 64px;
         font-weight: 700;
-        margin-top: 216px;
         margin-bottom: 32px;
     }
 
     &__disc {
-        width: 481px;
+        max-width: 481px;
         color: $colorText;
         font-size: 18px;
         font-weight: 300;
@@ -48,13 +48,17 @@ body {
         width: 234px;
         height: 48px;
         border-radius: 30px;
-background: #9C0332;
-color: $colorText;
-font-family: Montserrat;
-font-size: 18px;
-font-weight: 400;
-margin-bottom: 494px;
-border: none;
+        background: #9C0332;
+        color: $colorText;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 494px;
+        border: none;
+
+        &:hover {
+            cursor: url(img/cursor-hand-lines.svg), pointer;
+        }
     }
 }
 
@@ -63,19 +67,33 @@ border: none;
     display: flex;
     gap: 32px;
 }
+
 .game-card {
     max-width: calc((100vw - (padding-left + padding-right) - 64px) /2);
     position: relative;
+
     &__img {
         max-width: 100%;
+        border-radius: 16px;
     }
+
     &__name {
         position: absolute;
         color: $colorText;
-font-size: 24px;
-font-weight: 600;
-line-height: 32px; /* 133.333% */
-bottom: 32px;
-left: 32px;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        /* 133.333% */
+        bottom: 32px;
+        left: 32px;
+    }
+
+    &:hover {
+        cursor: url(img/cursor-hand-lines.svg), pointer;
+        border-radius: 16px;
+        outline: 3px solid #44D2FF;
     }
 }
+
+
+@import 'mobile';
