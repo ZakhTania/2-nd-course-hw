@@ -96,5 +96,50 @@ body {
     }
 }
 
+.seasons {
+   padding-top: 234px;
+   padding-bottom: 234px;
+    display: flex;
+    gap: 135px;
+    align-items: center;
+
+    &__game-info {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__heading {
+        color: $colorText;
+        font-size: 48px;
+        font-weight: 700;
+    
+    }
+
+    &__disc {
+        width: 584px;
+        color: $colorText;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 32px;
+    }
+
+    &__btn {
+        width: 234px;
+        height: 48px;
+        border-radius: 30px;
+        background: #9C0332;
+        color: $colorText;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 400;
+        border: none;
+
+        &:hover {
+            cursor: url(img/cursor-hand-lines.svg), pointer;
+            background: #EB443F;
+        }
+    }
+}
 
 @import 'mobile';
