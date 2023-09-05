@@ -7,14 +7,11 @@
 
 // // Задание 2
 // let num;
-// let evenOrodd = () => {
-//     do {
-//         num = prompt(`Введите число`);
-//     } while (isNaN(num));
-//     num = Number(num) % 2 === 0 ? `Число четное` : 'Число нечетное';
+// let evenOrodd = (num) => {
+//     num = num % 2 === 0 ? `Число четное` : 'Число нечетное';
 //     return num;
 // }
-// console.log(evenOrodd());
+// console.log(evenOrodd(8));
 
 // // Задание 3
 // // 3.1.
@@ -39,16 +36,30 @@
 // }
 // console.log(greeting());
 
-// Задание 5
-let multTwoNum = () => {
-    let a = prompt(`Введите первое число`);
-    let b = prompt(`Введите второе число`);
-    let result;
-    if (!isNaN(a) && !isNaN(b)) {
-        result = a * b;
+// // Задание 5
+// let multTwoNum = () => {
+//     let a = prompt(`Введите первое число`);
+//     let b = prompt(`Введите второе число`);
+//     let result;
+//     if (!isNaN(a) && !isNaN(b)) {
+//         result = a * b;
+//     } else {
+//         result = 'Одно или оба значения не являются числом';
+//     }
+//     return result;
+// }
+// console.log(multTwoNum());
+
+// Задание 6
+let n = prompt(`Введите число`);
+let result;
+let cubicN = () => {
+    if (!isNaN(n) && n != '' && n != null) {
+        let cube = n * n * n;
+        result = `${n} в кубе равняется ${cube}`
     } else {
-        result = 'Одно или оба значения не являются числом';
+        result = `Переданный параметр не является числом`;
     }
     return result;
 }
-console.log(multTwoNum());
+console.log(cubicN());
