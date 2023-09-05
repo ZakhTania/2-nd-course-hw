@@ -16,13 +16,25 @@
 // }
 // console.log(evenOrodd());
 
-// Задание 3
-// 3.1.
-let squareOfnum = (anyNumber) => {
-    let sqr = anyNumber * anyNumber;
-    console.log(`Квадрат чила ${anyNumber} равен ${sqr}`);
-}
-squareOfnum(8);
+// // Задание 3
+// // 3.1.
+// let squareOfnum = (anyNumber) => {
+//     let sqr = anyNumber * anyNumber;
+//     console.log(`Квадрат чила ${anyNumber} равен ${sqr}`);
+// }
+// squareOfnum(8);
 
-// 3.2.
-let sqrFnmbr = (nmbr) => nmbr *nmbr;
+// // 3.2.
+// let sqrFnmbr = (nmbr) => nmbr *nmbr;
+
+// Задание 4
+let greeting = () => {
+    let howOld = Number(prompt(`Сколько Вам лет?`));
+    if (howOld < 0) {
+        howOld = `Вы ввели неправильное значение`;
+    } else {
+        howOld = howOld < 13 ? `Привет, друг!` : `Добро пожаловать!`;
+    }
+    alert(howOld);
+}
+console.log(greeting());
