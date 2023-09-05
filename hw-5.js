@@ -50,16 +50,38 @@
 // }
 // console.log(multTwoNum());
 
-// Задание 6
-let n = prompt(`Введите число`);
-let result;
-let cubicN = () => {
-    if (!isNaN(n) && n != '' && n != null) {
-        let cube = n * n * n;
-        result = `${n} в кубе равняется ${cube}`
-    } else {
-        result = `Переданный параметр не является числом`;
-    }
-    return result;
+// // Задание 6
+// let n = prompt(`Введите число`);
+// let result;
+// let cubicN = () => {
+//     if (!isNaN(n) && n != '' && n != null) {
+//         let cube = n * n * n;
+//         result = `${n} в кубе равняется ${cube}`
+//     } else {
+//         result = `Переданный параметр не является числом`;
+//     }
+//     return result;
+// }
+// console.log(cubicN());
+
+// Задание 7
+function getArea() {
+    return Math.PI * this.radius * this.radius;
 }
-console.log(cubicN());
+
+function getPerimeter() {
+    return 2 * Math.PI * this.radius;
+}
+
+const circle1 = {
+    radius: 10,
+    getArea: getArea,
+    getPerimeter: getPerimeter,
+}
+
+const circle2 = {
+    radius: 5,
+    getArea: getArea,
+    getPerimeter: getPerimeter,
+}
+
