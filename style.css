@@ -96,7 +96,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  text-align: center;
 }
 .seasons__heading {
   color: #fff;
@@ -165,6 +164,9 @@ body {
     gap: 64px;
     padding-top: 51px;
     padding-bottom: 86px;
+  }
+  .seasons__game-info {
+    text-align: center;
   }
   .seasons__heading {
     text-align: center;
