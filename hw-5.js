@@ -27,14 +27,28 @@
 // // 3.2.
 // let sqrFnmbr = (nmbr) => nmbr *nmbr;
 
-// Задание 4
-let greeting = () => {
-    let howOld = Number(prompt(`Сколько Вам лет?`));
-    if (howOld < 0) {
-        howOld = `Вы ввели неправильное значение`;
+// // Задание 4
+// let greeting = () => {
+//     let howOld = Number(prompt(`Сколько Вам лет?`));
+//     if (howOld < 0) {
+//         howOld = `Вы ввели неправильное значение`;
+//     } else {
+//         howOld = howOld < 13 ? `Привет, друг!` : `Добро пожаловать!`;
+//     }
+//     alert(howOld);
+// }
+// console.log(greeting());
+
+// Задание 5
+let multTwoNum = () => {
+    let a = prompt(`Введите первое число`);
+    let b = prompt(`Введите второе число`);
+    let result;
+    if (!isNaN(a) && !isNaN(b)) {
+        result = a * b;
     } else {
-        howOld = howOld < 13 ? `Привет, друг!` : `Добро пожаловать!`;
+        result = 'Одно или оба значения не являются числом';
     }
-    alert(howOld);
+    return result;
 }
-console.log(greeting());
+console.log(multTwoNum());
