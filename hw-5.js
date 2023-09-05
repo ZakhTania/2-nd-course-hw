@@ -5,13 +5,24 @@
 // }
 // console.log(maxNumber(Number(prompt(`Введите первое число`)), Number(prompt(`Введите второе число`))));
 
-// Задание 2
-let num;
-let evenOrodd = () => {
-    do {
-        num = prompt(`Введите число`);
-    } while (isNaN(num));
-    num = Number(num) % 2 === 0 ? `Число четное` : 'Число нечетное';
-    return num;
+// // Задание 2
+// let num;
+// let evenOrodd = () => {
+//     do {
+//         num = prompt(`Введите число`);
+//     } while (isNaN(num));
+//     num = Number(num) % 2 === 0 ? `Число четное` : 'Число нечетное';
+//     return num;
+// }
+// console.log(evenOrodd());
+
+// Задание 3
+// 3.1.
+let squareOfnum = (anyNumber) => {
+    let sqr = anyNumber * anyNumber;
+    console.log(`Квадрат чила ${anyNumber} равен ${sqr}`);
 }
-console.log(evenOrodd());
+squareOfnum(8);
+
+// 3.2.
+let sqrFnmbr = (nmbr) => nmbr *nmbr;
