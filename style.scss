@@ -70,7 +70,7 @@ body {
 }
 
 .game-card {
-    max-width: calc((100vw - (padding-left + padding-right) - 64px) /2);
+    // max-width: calc((100vw - (padding-left + padding-right) - 64px) /2);
     position: relative;
 
     &__img {
@@ -107,6 +107,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 32px;
+        text-align: center;
     }
 
     &__heading {
@@ -117,7 +118,7 @@ body {
     }
 
     &__disc {
-        width: 584px;
+        max-width: 584px;
         color: $colorText;
         font-size: 18px;
         font-weight: 300;
