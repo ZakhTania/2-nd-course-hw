@@ -70,7 +70,15 @@ alert(answ);
 
 // Задание 8
 const str = 'abcdef';
+
 let strArr = str.split('');
+
 strArr = strArr.reverse();
+
 console.log(strArr.join(''));
 
+// Задание 9
+ const arrayNum = [[1, 2, 3,],[4, 5, 6]];
+let nextArr = [];
+ nextArr = nextArr.concat(arrayNum[0], arrayNum[1]);
+ console.log(nextArr);
