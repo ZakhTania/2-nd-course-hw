@@ -20,10 +20,23 @@ console.log(anyArray.join([' ']));
 // Задание 4
 let multiArr = [];
 let simpleArr = [];
+
 while (multiArr.length < 3) {
+
     while (simpleArr.length < 3) {
         simpleArr.push(1);
     }
+
     multiArr.push(simpleArr);
 }
 console.log(multiArr);
+
+// Задание 5
+const ar = [1, 1, 1];
+
+while (ar.length < 6) {
+
+    ar.push(2);
+}
+
+console.log(ar);
