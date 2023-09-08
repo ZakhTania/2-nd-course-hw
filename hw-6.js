@@ -1,4 +1,4 @@
-// Задание 1
+// // Задание 1
 const arrayOfnumber = [1, 5, 4, 10, 0, 3];
 for (let el = 0; el < arrayOfnumber.length; el++) {
     console.log(arrayOfnumber[el]);
@@ -6,3 +6,6 @@ for (let el = 0; el < arrayOfnumber.length; el++) {
         break;
     }
 }
+
+// Задание 2
+console.log(`Позиция числа 4 в данном массиве -  [${arrayOfnumber.indexOf(4)}].`);
