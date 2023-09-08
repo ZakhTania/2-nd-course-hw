@@ -42,10 +42,30 @@ while (ar.length < 6) {
 console.log(ar);
 
 // Задание 6
- const unsortArray = [9, 8, 7, 'a', 6, 5];
+const unsortArray = [9, 8, 7, 'a', 6, 5];
 
- unsortArray.sort();
+unsortArray.sort();
 
- unsortArray.pop()
+unsortArray.pop()
 
- console.log(unsortArray);
+console.log(unsortArray);
+
+//  Задание 7
+
+let numb = Number(prompt(`Введите цифру от 1 до 9`));
+let answ;
+
+for (let i = 0; i < unsortArray.length; i++) {
+
+    if (unsortArray[i] == numb) {
+        answ = `Угадал`;
+        break;
+
+    } else {
+        answ = `Не угадал`;
+    }
+}
+
+alert(answ);
+
+
