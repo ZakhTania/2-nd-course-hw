@@ -40,3 +40,12 @@ while (ar.length < 6) {
 }
 
 console.log(ar);
+
+// Задание 6
+ const unsortArray = [9, 8, 7, 'a', 6, 5];
+
+ unsortArray.sort();
+
+ unsortArray.pop()
+
+ console.log(unsortArray);
