@@ -68,4 +68,9 @@ for (let i = 0; i < unsortArray.length; i++) {
 
 alert(answ);
 
+// Задание 8
+const str = 'abcdef';
+let strArr = str.split('');
+strArr = strArr.reverse();
+console.log(strArr.join(''));
 
