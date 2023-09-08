@@ -29,7 +29,41 @@
             margin-bottom: 238px;
         }
     }
+
     .games-box {
         flex-wrap: wrap;
+        &__img {
+            width: calc(100vw - 32px);
+            height: 300px;
+        }
+    }
+
+    .seasons {
+        flex-direction: column;
+        gap: 64px;
+        padding-top: 51px;
+        padding-bottom: 86px;
+&__game-info {
+    text-align: center;
+}
+        &__heading {
+            text-align: center;
+            font-size: 32px;
+
+        }
+
+        &__disc {
+            font-size: 14px;
+            line-height: 22px;
+
+        }
+
+        &__btn {
+            align-self: center;
+        }
+
+        &__img {
+            width: calc(100vw - 32px);
+        }
     }
 }
