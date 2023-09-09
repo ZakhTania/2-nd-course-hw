@@ -100,17 +100,32 @@
 
 // console.log(newSumArr);
 
-// Задание 12
-let outArray = [];
+// // Задание 12
+// let outArray = [];
 
-const getLengthWords = (inArray) => {
+// const getLengthWords = (inArray) => {
 
-    for (let i = 0; i < inArray.length; i++) {
+//     for (let i = 0; i < inArray.length; i++) {
 
-        outArray[i] = inArray[i].length;
+//         outArray[i] = inArray[i].length;
 
+//     }
+// 
+//     return outArray;
+// }
+
+// console.log(getLengthWords(['слово', '', 'слог', 'длинное предложение', 'буква']));
+
+// Задание 13
+function filterPositive(array) {
+let arrayAfter = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] < 0) {
+            arrayAfter.push(array[i]);
+        }
     }
-    return outArray;
+    return arrayAfter;
 }
 
-console.log(getLengthWords(['слово', '', 'слог', 'длинное предложение', 'буква']));
+console.log(filterPositive([-1, 0, 5, -10, 56]));
+console.log(filterPositive([-25, 25, 0, -1000, -2]));
