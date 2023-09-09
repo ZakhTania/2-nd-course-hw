@@ -78,13 +78,24 @@ strArr = strArr.reverse();
 console.log(strArr.join(''));
 
 // Задание 9
- const arrayNum = [[1, 2, 3,],[4, 5, 6]];
+const arrayNum = [[1, 2, 3,], [4, 5, 6]];
 let nextArr = [];
- nextArr = nextArr.concat(arrayNum[0], arrayNum[1]);
- console.log(nextArr);
+
+nextArr = nextArr.concat(arrayNum[0], arrayNum[1]);
+
+console.log(nextArr);
 
 //  Задание 10
 const sumArr = [2, 4, 8, 1, 6, 5, 9];
-for ( let each = 0; each < sumArr.length - 1; each++) {
+
+for (let each = 0; each < sumArr.length - 1; each++) {
+
     console.log(sumArr[each] + sumArr[each + 1]);
 }
+
+// Задание 11
+console.log(sumArr);
+
+const newSumArr = sumArr.map(el => el * el);
+
+console.log(newSumArr);
