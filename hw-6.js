@@ -116,16 +116,38 @@
 
 // console.log(getLengthWords(['слово', '', 'слог', 'длинное предложение', 'буква']));
 
-// Задание 13
-function filterPositive(array) {
-let arrayAfter = [];
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] < 0) {
-            arrayAfter.push(array[i]);
-        }
+// // Задание 13
+// function filterPositive(array) {
+// let arrayAfter = [];
+
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] < 0) {
+//             arrayAfter.push(array[i]);
+//         }
+//     }
+
+//     return arrayAfter;
+// }
+
+// console.log(filterPositive([-1, 0, 5, -10, 56]));
+// console.log(filterPositive([-25, 25, 0, -1000, -2]));
+
+// Задание 14
+const randomArr = [];
+
+for (let i = 0; i < 10; i++) {
+
+    randomArr[i] = Math.floor(Math.random() * 11);
+}
+const randomEvenArr = [];
+
+for (let el = 0; el < randomArr.length; el++) {
+
+    if (randomArr[el] % 2 === 0) {
+
+        randomEvenArr.push(randomArr[el])
     }
-    return arrayAfter;
 }
 
-console.log(filterPositive([-1, 0, 5, -10, 56]));
-console.log(filterPositive([-25, 25, 0, -1000, -2]));
+console.log(randomArr);
+console.log(randomEvenArr);
