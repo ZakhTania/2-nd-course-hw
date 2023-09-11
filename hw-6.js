@@ -9,19 +9,22 @@ for (let item of arrayOfnumber) {
     }
 }
 
+
 // Задание 2
 console.log(`Позиция числа 4 в данном массиве -  [${arrayOfnumber.indexOf(4)}].`);
+
 
 // Задание 3
 const anyArray = [1, 3, 5, 10, 20];
 
 console.log(anyArray.join([' ']));
 
+
 // Задание 4
-let multiArr = [];
-let simpleArr = [];
+const multiArr = [];
 
 while (multiArr.length < 3) {
+    const simpleArr = [];
 
     while (simpleArr.length < 3) {
         simpleArr.push(1);
@@ -31,59 +34,57 @@ while (multiArr.length < 3) {
 }
 console.log(multiArr);
 
+
 // Задание 5
 const ar = [1, 1, 1];
 
-while (ar.length < 6) {
-
-    ar.push(2);
-}
+ar.push(2, 2, 2);
 
 console.log(ar);
+
 
 // Задание 6
 const unsortArray = [9, 8, 7, 'a', 6, 5];
 
-unsortArray.sort();
-
-unsortArray.pop()
+unsortArray.sort().pop();
 
 console.log(unsortArray);
 
+
 //  Задание 7
+unsortArray.sort((a, b) => b - a);
 
-let numb = Number(prompt(`Введите цифру от 1 до 9`));
-let answ;
+let userNumber = Number(prompt(`Введите цифру от 1 до 9`));
 
-for (let i = 0; i < unsortArray.length; i++) {
+const guessedNumber = () => {
 
-    if (unsortArray[i] == numb) {
-        answ = `Угадал`;
-        break;
-
-    } else {
-        answ = `Не угадал`;
+    if (unsortArray.includes(userNumber)) {
+        return `Угадал`
     }
+
+    return `Не угадал`;
 }
 
-alert(answ);
+alert(guessedNumber());
+
 
 // Задание 8
 const str = 'abcdef';
 
-let strArr = str.split('');
+const strArr = str.split('').reverse().join('');
 
-strArr = strArr.reverse();
+console.log(strArr);
 
-console.log(strArr.join(''));
 
 // Задание 9
 const arrayNum = [[1, 2, 3,], [4, 5, 6]];
+
 let nextArr = [];
 
 nextArr = nextArr.concat(arrayNum[0], arrayNum[1]);
 
 console.log(nextArr);
+
 
 //  Задание 10
 const sumArr = [2, 4, 8, 1, 6, 5, 9];
@@ -93,6 +94,7 @@ for (let each = 0; each < sumArr.length - 1; each++) {
     console.log(sumArr[each] + sumArr[each + 1]);
 }
 
+
 // Задание 11
 console.log(sumArr);
 
@@ -100,37 +102,29 @@ const newSumArr = sumArr.map(el => el * el);
 
 console.log(newSumArr);
 
+
 // Задание 12
-let outArray = [];
+const getLengthWords = (wordArray) => {
 
-const getLengthWords = (inArray) => {
+wordArray = wordArray.map(el => el.length);
 
-    for (let i = 0; i < inArray.length; i++) {
+return wordArray;
 
-        outArray[i] = inArray[i].length;
-
-    }
-
-    return outArray;
 }
 
 console.log(getLengthWords(['слово', '', 'слог', 'длинное предложение', 'буква']));
 
+
 // Задание 13
-function filterPositive(array) {
-let arrayAfter = [];
+function filterPositive(integers) {
+let positiveNumber = integers.filter((integer) => integer < 0);
 
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] < 0) {
-            arrayAfter.push(array[i]);
-        }
-    }
-
-    return arrayAfter;
+    return positiveNumber;
 }
 
 console.log(filterPositive([-1, 0, 5, -10, 56]));
 console.log(filterPositive([-25, 25, 0, -1000, -2]));
+
 
 // Задание 14
 const randomArr = [];
@@ -139,30 +133,26 @@ for (let i = 0; i < 10; i++) {
 
     randomArr[i] = Math.floor(Math.random() * 11);
 }
-const randomEvenArr = [];
 
-for (let el = 0; el < randomArr.length; el++) {
+const randomEvenArr = randomArr.filter(el => el % 2 === 0);
 
-    if (randomArr[el] % 2 === 0) {
-
-        randomEvenArr.push(randomArr[el])
-    }
-}
 
 console.log(randomArr);
 console.log(randomEvenArr);
 
+
 // Задание 15
-const randomSix = [];
-let sum = 0;
+const randomNumbers = [];
 
 for (let i = 0; i < 6; i++) {
-    randomSix[i] = Math.floor(Math.random() * 10) + 1;
- 
-    sum += randomSix[i];
+
+    randomNumbers[i] = Math.floor(Math.random() * 10) + 1;
+
 }
 
-let average = sum / randomSix.length;
+const sumRandomNumbers = randomNumbers.reduce((acc, randomNumber) => acc + randomNumber);
 
-console.log(randomSix);
+let average = sumRandomNumbers / randomNumbers.length;
+
+console.log(randomNumbers);
 console.log(average);
