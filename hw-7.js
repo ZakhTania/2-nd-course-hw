@@ -11,7 +11,7 @@
 //     let strArrayFilter = arrayStrings.filter((arrayString) => arrayString.substring(0, str.length).toLowerCase() === str.toLowerCase());
 
 //     return strArrayFilter;
-    
+
 // }
 
 // console.log(searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко'));
@@ -41,15 +41,31 @@
 
 // console.log(randomNuber());
 
-// Задание 6
- const getRandomArrNumbers = (number) => {
-    const randomArrNumbers = [];
-    for (let el; randomArrNumbers.length < Math.floor(number / 2);) {
-        el = Math.floor(Math.random() * (number + 1));
-        randomArrNumbers.push(el);
-    }
-    return randomArrNumbers;
- } 
+// // Задание 6
+// const getRandomArrNumbers = (number) => {
 
- console.log(getRandomArrNumbers(7));
- console.log(getRandomArrNumbers(12));
+//     const randomArrNumbers = [];
+
+//     for (let el; randomArrNumbers.length < Math.floor(number / 2);) {
+
+//         el = Math.floor(Math.random() * (number + 1));
+
+//         randomArrNumbers.push(el);
+//     }
+
+//     return randomArrNumbers;
+//  } 
+
+//  console.log(getRandomArrNumbers(7));
+//  console.log(getRandomArrNumbers(12));
+
+// Задание 7
+ const getRandomFromNumbers = (num1, num2) => {
+
+    let max = Math.max(num1, num2);
+    let min = Math.min(num1, num2);
+
+    return Math.round(Math.random() * (max - min)) + min;
+ }
+
+ console.log(getRandomFromNumbers(5, 15));
