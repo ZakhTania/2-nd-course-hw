@@ -36,7 +36,20 @@
 
 // console.log(minMaxNumber([52, 53, 49, 77, 21, 32]));
 
-// Задание 5
-const randomNuber = () => Math.floor(Math.random() * 10) + 1;
+// // Задание 5
+// const randomNuber = () => Math.floor(Math.random() * 10) + 1;
 
-console.log(randomNuber());
+// console.log(randomNuber());
+
+// Задание 6
+ const getRandomArrNumbers = (number) => {
+    const randomArrNumbers = [];
+    for (let el; randomArrNumbers.length < Math.floor(number / 2);) {
+        el = Math.floor(Math.random() * (number + 1));
+        randomArrNumbers.push(el);
+    }
+    return randomArrNumbers;
+ } 
+
+ console.log(getRandomArrNumbers(7));
+ console.log(getRandomArrNumbers(12));
