@@ -75,10 +75,21 @@
 
 // console.log(todaysDate);
 
-// Задание 9
-let currentDate = new Date();
-let futureDate = new Date();
+// // Задание 9
+// let currentDate = new Date();
+// let futureDate = new Date();
 
-futureDate.setDate(currentDate.getDate() + 73);
+// futureDate.setDate(currentDate.getDate() + 73);
 
-console.log(futureDate);
+// console.log(futureDate);
+
+// Задание 10
+const dataRu = (data) => {
+    const days = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
+    const month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+
+    return `Дата: ${data.getDate()} ${month[data.getMonth()]} ${data.getFullYear()} - это ${days[data.getDay()]}.
+
+Время: ${data.getHours()}:${data.getMinutes()}:${data.getSeconds()}`
+}
+console.log(dataRu(new Date()));
