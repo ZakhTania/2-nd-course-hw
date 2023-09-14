@@ -25,13 +25,18 @@
 // console.log(Math.ceil(number));
 // console.log(Math.round(number));
 
-// Задание 4
-function minMaxNumber(numberArray) {
+// // Задание 4
+// function minMaxNumber(numberArray) {
 
-    const min = Math.min(...numberArray);
-    const max = Math.max(...numberArray);
+//     const min = Math.min(...numberArray);
+//     const max = Math.max(...numberArray);
 
-    return `Наименьшее число ${min}, наибольшее число ${max}.`;
-}
+//     return `Наименьшее число ${min}, наибольшее число ${max}.`;
+// }
 
-console.log(minMaxNumber([52, 53, 49, 77, 21, 32]));
+// console.log(minMaxNumber([52, 53, 49, 77, 21, 32]));
+
+// Задание 5
+const randomNuber = () => Math.floor(Math.random() * 10) + 1;
+
+console.log(randomNuber());
