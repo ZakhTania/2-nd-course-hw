@@ -70,7 +70,15 @@
 
 //  console.log(getRandomFromNumbers(5, 15));
 
-// Задание 8
-let todaysDate = new Date();
+// // Задание 8
+// let todaysDate = new Date();
 
-console.log(todaysDate);
+// console.log(todaysDate);
+
+// Задание 9
+let currentDate = new Date();
+let futureDate = new Date();
+
+futureDate.setDate(currentDate.getDate() + 73);
+
+console.log(futureDate);
