@@ -125,6 +125,46 @@ body {
   background: #EB443F;
 }
 
+.rememberWord {
+  padding-top: 239px;
+  padding-bottom: 239px;
+  display: flex;
+  gap: 135px;
+  align-items: center;
+}
+.rememberWord__game-info {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.rememberWord__heading {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+}
+.rememberWord__disc {
+  max-width: 584px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 32px;
+}
+.rememberWord__btn {
+  width: 234px;
+  height: 48px;
+  border-radius: 30px;
+  background: #9C0332;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+}
+.rememberWord__btn:hover {
+  cursor: url(img/cursor-hand-lines.svg), pointer;
+  background: #EB443F;
+}
+
 @media (max-width: 426px) {
   .center {
     padding-left: 16px;
@@ -181,5 +221,29 @@ body {
   }
   .seasons__img {
     width: calc(100vw - 32px);
+  }
+  .rememberWord {
+    flex-direction: column;
+    gap: 64px;
+    padding-top: 51px;
+    padding-bottom: 90px;
+  }
+  .rememberWord__game-info {
+    text-align: center;
+  }
+  .rememberWord__heading {
+    text-align: center;
+    font-size: 32px;
+  }
+  .rememberWord__disc {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .rememberWord__btn {
+    align-self: center;
+  }
+  .rememberWord__img {
+    width: calc(100vw - 32px);
+    order: 1;
   }
 }/*# sourceMappingURL=style.css.map */
