@@ -8,7 +8,7 @@ console.log(stringJs);
 // Задание 2
 function searchStart(arrayStrings, str) {
 
-    let strArrayFilter = arrayStrings.filter((arrayString) => arrayString.substring(0, str.length).toLowerCase() === str.toLowerCase());
+    let strArrayFilter = arrayStrings.filter((arrayString) => arrayString.toLowerCase().startsWith(str.toLowerCase()));
 
     return strArrayFilter;
 
@@ -46,9 +46,9 @@ const getRandomArrNumbers = (number) => {
 
     const randomArrNumbers = [];
 
-    for (let el; randomArrNumbers.length < Math.floor(number / 2);) {
+    for (let i = 0; i < Math.floor(number / 2); i++) {
 
-        el = Math.floor(Math.random() * (number + 1));
+       let el = Math.floor(Math.random() * (number + 1));
 
         randomArrNumbers.push(el);
     }
@@ -65,7 +65,7 @@ const getRandomArrNumbers = (number) => {
     let max = Math.max(num1, num2);
     let min = Math.min(num1, num2);
 
-    return Math.round(Math.random() * (max - min)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
  }
 
  console.log(getRandomFromNumbers(5, 15));
@@ -86,10 +86,16 @@ console.log(futureDate);
 // Задание 10
 const dataRu = (data) => {
 
-    const days = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
-    const month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+const days = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
+const month = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
 
-    return `Дата: ${data.getDate()} ${month[data.getMonth()]} ${data.getFullYear()} - это ${days[data.getDay()]}.
+let getDate = data.getDate();
+
+if (getDate < 10 ) {
+  getDate = '0' + data.getDate();
+}
+
+return `Дата: ${getDate} ${month[data.getMonth()]} ${data.getFullYear()} - это ${days[data.getDay()]}.
 Время: ${data.getHours()}:${data.getMinutes()}:${data.getSeconds()}`
 
 }
@@ -98,40 +104,46 @@ console.log(dataRu(new Date()));
 
 // Задание 11
 const rememberWord = () => {
-let fruitsList = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
 
-fruitsList = fruitsList.sort(() => Math.random() - 0.5);
+  let fruitsList = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
 
-let usersFruit = fruitsList.map(el => {
- if (fruitsList.indexOf(el) === 0) {
-        
-    return el;
- }
- return el.toLowerCase();
-})
+  fruitsList = fruitsList.sort(() => Math.random() - 0.5);
 
-alert(usersFruit.join(', ') + ".");
+  let usersFruit = fruitsList.map(el => {
+    if (fruitsList.indexOf(el) === 0) {
 
-let firstItem = prompt(`Какой фрукт был первым?`);
-let lastItem = prompt(`Какой фрукт был последним?`);
+      return el;
+    }
+    return el.toLowerCase();
+  })
 
-const kindOfFruit = () => {
+  alert(usersFruit.join(', ') + ".");
+
+  let firstItem = prompt(`Какой фрукт был первым?`);
+  let lastItem = prompt(`Какой фрукт был последним?`);
+
+  const kindOfFruit = () => {
+    if (firstItem === null || lastItem === null) {
+      return `Ой, что-то пошло не так!`
+    }
 
     if (fruitsList[0].toLowerCase() === firstItem.toLocaleLowerCase() && fruitsList[fruitsList.length - 1].toLowerCase() === lastItem.toLocaleLowerCase()) {
 
-        return `Поздравляю, вы выиграли!`;
+      return `Поздравляю, вы выиграли!`;
     }
 
     if (fruitsList[0].toLowerCase() === firstItem.toLocaleLowerCase() || fruitsList[fruitsList.length - 1].toLowerCase() === lastItem.toLocaleLowerCase()) {
 
-        return `Вы были близки к победе!`;
+      return `Вы были близки к победе!`;
     }
 
     if (fruitsList[0].toLowerCase() !== firstItem.toLocaleLowerCase() && fruitsList[fruitsList.length - 1].toLowerCase() !== lastItem.toLocaleLowerCase()) {
 
-        return `Очень жаль, вы ответили неверно!`;
-    } 
-}
+      return `Очень жаль, вы ответили неверно!`;
+    }
 
-return alert(kindOfFruit());
+
+  }
+
+  return alert(kindOfFruit());
 }
