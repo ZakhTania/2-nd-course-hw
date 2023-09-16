@@ -90,17 +90,31 @@ const days = ['воскресенье', 'понедельник', 'вторни�
 const month = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
 
 let getDate = data.getDate();
-
 if (getDate < 10 ) {
   getDate = '0' + data.getDate();
 }
 
+let getHours = data.getHours();
+if (getHours < 10 ) {
+  getHours = '0' + data.getHours();
+}
+
+let getMinutes = data.getMinutes();
+if (getMinutes < 10 ) {
+  getMinutes = '0' + data.getMinutes();
+}
+
+let getSeconds = data.getSeconds();
+if (getSeconds < 10 ) {
+  getSeconds = '0' + data.getSeconds();
+}
+
 return `Дата: ${getDate} ${month[data.getMonth()]} ${data.getFullYear()} - это ${days[data.getDay()]}.
-Время: ${data.getHours()}:${data.getMinutes()}:${data.getSeconds()}`
+Время: ${getHours}:${getMinutes}:${getSeconds}`
 
 }
 
-console.log(dataRu(new Date()));
+console.log(dataRu(new Date(1682989448000)));
 
 // Задание 11
 const rememberWord = () => {
@@ -141,8 +155,6 @@ const rememberWord = () => {
 
       return `Очень жаль, вы ответили неверно!`;
     }
-
-
   }
 
   return alert(kindOfFruit());
