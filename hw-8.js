@@ -34,7 +34,7 @@ function filter(arr, ruleFunction) {
    return output;
 }
 
-console.log(filter([3, -4, 1, 9], isPositive)); // Должен выводить [3, 1, 9]
+console.log(filter([3, -4, 1, 9], isPositive));
 
 const peopleGender = [
    { name: 'Глеб', gender: 'male' },
@@ -43,7 +43,7 @@ const peopleGender = [
    { name: 'Оксана', gender: 'female' }
 ];
 
-console.log(filter(peopleGender, isMale)); // Должен выводить [{name: 'Глеб', gender: 'male'},  {name: 'Олег', gender: 'male'}]
+console.log(filter(peopleGender, isMale));
 
 // Задание 3
 const timer = (deadline) => {
@@ -73,3 +73,22 @@ function delayForSecond(callback) {
 delayForSecond(function () {
   console.log('Привет, Глеб!');
 })
+
+// Задание 5
+
+function delayForSecond(cb, name) {
+
+   setTimeout(() => {
+       console.log('Прошла одна секунда');
+           if(cb) { 	cb(name); }
+
+   }, 1000)
+}
+
+function sayHi (name) {
+   console.log(`Привет, ${name}!`);
+}
+
+delayForSecond(sayHi, 'Глеб');
+
+
