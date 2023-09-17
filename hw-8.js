@@ -25,7 +25,7 @@ function filter(arr, ruleFunction) {
    const output = [];
 
    for (let i = 0; i < arr.length; i++) {
-      
+
       if (ruleFunction(arr[i])) {
          output.push(arr[i]);
       }
@@ -44,3 +44,20 @@ const peopleGender = [
 ];
 
 console.log(filter(peopleGender, isMale)); // Должен выводить [{name: 'Глеб', gender: 'male'},  {name: 'Олег', gender: 'male'}]
+
+// Задание 3
+const timer = (deadline) => {
+
+	const interval = setInterval(() => {
+		console.log(new Date());
+	}, 3 *1000);
+
+
+	setTimeout(() => {
+    clearInterval(interval);
+    console.log('30 секунд прошло')
+  }, deadline * 1000)
+};
+
+timer(30);
+
