@@ -80,7 +80,7 @@ function delayForSecond(cb, name) {
 
    setTimeout(() => {
        console.log('Прошла одна секунда');
-           if(cb) { 	cb(name); }
+           if(cb) { 	cb(); }
 
    }, 1000)
 }
@@ -89,6 +89,6 @@ function sayHi (name) {
    console.log(`Привет, ${name}!`);
 }
 
-delayForSecond(sayHi, 'Глеб');
+delayForSecond(() => sayHi('Глеб'));
 
 
